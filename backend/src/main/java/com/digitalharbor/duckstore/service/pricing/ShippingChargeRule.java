@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-/** Rules 10-12: sea +400 flat, land +10 per unit, air +30 per unit (-15% of the air charge above 1000 units). */
+
 @Component
 @Order(4)
 public class ShippingChargeRule implements PricingRule {
