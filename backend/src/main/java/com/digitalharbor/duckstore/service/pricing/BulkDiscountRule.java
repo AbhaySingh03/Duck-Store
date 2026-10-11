@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-/** Rule 2: more than 100 units -> 20% discount. */
+
 @Component
 @Order(1)
 public class BulkDiscountRule implements PricingRule {
