@@ -11,7 +11,7 @@ import com.digitalharbor.duckstore.service.pricing.PricingService;
 import java.math.BigDecimal;
 import org.springframework.stereotype.Service;
 
-/** Orchestrates an order: look up the price, decide the packaging, compute the total. Holds no rules itself. */
+
 @Service
 public class OrderService {
 
