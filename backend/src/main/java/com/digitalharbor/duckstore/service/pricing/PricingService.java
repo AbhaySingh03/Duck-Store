@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
-/** Runs every {@link PricingRule} (in @Order) and sums the result. New rule = new class, nothing else changes. */
+
 @Service
 public class PricingService {
 
