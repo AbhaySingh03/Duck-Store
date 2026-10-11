@@ -15,7 +15,7 @@ public interface DuckRepository extends JpaRepository<Duck, Integer> {
 
     List<Duck> findByDeletedFalse(Sort sort);
 
-    /** Row-locked lookup (SELECT ... FOR UPDATE). Includes logically deleted ducks. */
+    
     @Lock(LockModeType.PESSIMISTIC_WRITE)
     Optional<Duck> findByColorAndSizeAndPrice(Color color, Size size, BigDecimal price);
 
