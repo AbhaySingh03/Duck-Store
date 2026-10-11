@@ -83,7 +83,7 @@ public class DuckService {
         tx.executeWithoutResult(status -> findLiveForUpdate(id).setDeleted(true));
     }
 
-    /** Unit price used by the store: the cheapest live duck of that color and size. */
+  
     public BigDecimal currentPrice(Color color, Size size) {
         return ducks.findFirstByColorAndSizeAndDeletedFalseOrderByPriceAsc(color, size)
                 .map(Duck::getPrice)
