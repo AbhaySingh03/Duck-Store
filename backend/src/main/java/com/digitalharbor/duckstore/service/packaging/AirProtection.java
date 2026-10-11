@@ -14,7 +14,7 @@ public class AirProtection implements ProtectionPolicy {
 
     public List<Protection> protectionFor(PackageType packageType) {
         return packageType == PackageType.PLASTIC
-                ? List.of(Protection.BUBBLE_WRAP_BAGS)       // rule 5
-                : List.of(Protection.POLYSTYRENE_BALLS);     // rule 4: wood or cardboard
+                ? List.of(Protection.BUBBLE_WRAP_BAGS)       
+                : List.of(Protection.POLYSTYRENE_BALLS);    
     }
 }
