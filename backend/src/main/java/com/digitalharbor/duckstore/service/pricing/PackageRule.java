@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-/** Rules 3-5: wood +5%, plastic +10%, cardboard -1%. */
+
 @Component
 @Order(2)
 public class PackageRule implements PricingRule {
