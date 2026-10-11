@@ -13,6 +13,6 @@ public class LandProtection implements ProtectionPolicy {
     }
 
     public List<Protection> protectionFor(PackageType packageType) {
-        return List.of(Protection.POLYSTYRENE_BALLS); // rule 6: any package
+        return List.of(Protection.POLYSTYRENE_BALLS); 
     }
 }
