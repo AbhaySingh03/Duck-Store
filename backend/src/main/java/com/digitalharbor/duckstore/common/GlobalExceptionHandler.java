@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
-/** Turns exceptions into consistent JSON errors so controllers stay free of try/catch. */
+
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
@@ -38,7 +38,7 @@ public class GlobalExceptionHandler {
         return ResponseEntity.badRequest().body(new ApiError(400, "Validation failed", details));
     }
 
-    /** Malformed JSON or an enum value such as color "Pink". */
+   
     @ExceptionHandler(HttpMessageNotReadableException.class)
     ResponseEntity<ApiError> unreadable(HttpMessageNotReadableException e) {
         String cause = NestedExceptionUtils.getMostSpecificCause(e).getMessage();
@@ -50,7 +50,7 @@ public class GlobalExceptionHandler {
         return respond(HttpStatus.BAD_REQUEST, "Invalid request: " + e.getMessage());
     }
 
-    /** Unique-constraint violation that survived the service's retries. */
+   
     @ExceptionHandler(DataIntegrityViolationException.class)
     ResponseEntity<ApiError> integrity(DataIntegrityViolationException e) {
         log.warn("Data integrity violation", e);
