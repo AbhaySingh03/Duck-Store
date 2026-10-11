@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 import org.springframework.stereotype.Service;
 
-/** Decides the package from the duck size (rules 1-3) and the protection from the shipping mode (rules 4-7). */
+
 @Service
 public class PackagingService {
 
