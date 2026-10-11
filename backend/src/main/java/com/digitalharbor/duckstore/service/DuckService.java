@@ -16,13 +16,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
 
-/**
- * Warehouse business rules.
- *
- * Merge invariant: at most one row per (color, size, price). It is guaranteed by
- *  1. a UNIQUE constraint in the database (the final safety net), and
- *  2. a row lock + retry here, so concurrent adds of the same duck end up summed, never duplicated or lost.
- */
+
 @Service
 public class DuckService {
 
