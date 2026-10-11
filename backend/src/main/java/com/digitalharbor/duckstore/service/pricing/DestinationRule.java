@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-/** Rules 6-9: USA +18%, Bolivia +13%, India +19%, anywhere else +15%. */
+
 @Component
 @Order(3)
 public class DestinationRule implements PricingRule {
