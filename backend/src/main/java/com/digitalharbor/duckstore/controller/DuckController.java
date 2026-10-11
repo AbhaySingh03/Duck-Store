@@ -22,13 +22,13 @@ public class DuckController {
         this.service = service;
     }
 
-    /** GET /api/ducks?sort=asc|desc  (sorted by quantity, default highest stock first) */
+   
     @GetMapping
     public List<DuckResponse> list(@RequestParam(defaultValue = "desc") String sort) {
         return service.list(Sort.Direction.fromString(sort)).stream().map(DuckResponse::from).toList();
     }
 
-    /** 201 when a new record is created, 200 when the quantity was merged into an existing duck. */
+   
     @PostMapping
     public ResponseEntity<DuckResponse> add(@Valid @RequestBody DuckRequest request) {
         AddResult result = service.add(request.color(), request.size(), request.price(), request.quantity());
