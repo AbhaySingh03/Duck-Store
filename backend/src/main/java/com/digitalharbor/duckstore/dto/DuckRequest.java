@@ -5,7 +5,7 @@ import com.digitalharbor.duckstore.entity.enums.Size;
 import jakarta.validation.constraints.*;
 import java.math.BigDecimal;
 
-/** Body for adding a duck. */
+
 public record DuckRequest(
         @NotNull Color color,
         @NotNull Size size,
